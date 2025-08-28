@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table of Elements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Periodic Table of Elements</h1>
+        <div class="periodic-table" id="periodicTable">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="element-details">
+                <div class="element-header">
+                    <div class="element-symbol" id="modalSymbol"></div>
+                    <div class="element-info">
+                        <h2 id="modalName"></h2>
+                        <p id="modalNumber"></p>
+                        <div class="external-links">
+                            <a id="wikipediaLink" href="#" target="_blank" class="wiki-link">
+                                🔗 Wikipedia
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-properties">
+                    <div class="property-group">
+                        <h3>Basic Properties</h3>
+                        <p><strong>Atomic Mass:</strong> <span id="modalMass"></span></p>
+                        <p><strong>Group:</strong> <span id="modalGroup"></span></p>
+                        <p><strong>Period:</strong> <span id="modalPeriod"></span></p>
+                        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+                        <p><strong>Electron Configuration:</strong> <span id="modalElectronConfig"></span></p>
+                    </div>
+                    <div class="property-group">
+                        <h3>Physical Properties</h3>
+                        <p><strong>Density:</strong> <span id="modalDensity"></span></p>
+                        <p><strong>Melting Point:</strong> <span id="modalMeltingPoint"></span></p>
+                        <p><strong>Boiling Point:</strong> <span id="modalBoilingPoint"></span></p>
+                        <p><strong>Electronegativity:</strong> <span id="modalElectronegativity"></span></p>
+                        <p><strong>Oxidation States:</strong> <span id="modalOxidationStates"></span></p>
+                    </div>
+                    <div class="description-section">
+                        <h3>Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                    <div class="eds-section">
+                        <h3>🔬 EDS Spectral Analysis</h3>
+                        <div class="eds-overview">
+                            <div class="eds-summary" id="edsSummary"></div>
+                            <div class="eds-applications" id="edsApplications"></div>
+                        </div>
+                        <div class="eds-peaks" id="edsPeaks"></div>
+                        <div class="eds-chart" id="edsChart"></div>
+                        <div class="eds-technical" id="edsTechnical"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="elements-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
